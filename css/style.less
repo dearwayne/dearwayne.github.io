@@ -1,0 +1,349 @@
+@contentHeight: 300px;
+
+body {
+  background-color: rgb(230, 230, 230);
+}
+
+#mainContainer {
+  top: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#person_logo {
+  position: absolute;
+  margin: 10px 0 0 20px;
+  font-size: 2em;
+}
+
+#centerDiv {
+  position: absolute;
+  width: 100%;
+  height: @contentHeight;
+  top: 50%;
+  margin: -@contentHeight/2 0 0 0;
+  text-align: center;
+}
+
+.FullScreenDiv {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+#productFullScreenDiv {
+  display: none;
+  background-color: rgb(38, 38, 38);
+}
+
+#productListDiv {
+  position: absolute;
+  z-index: 10;
+  margin: 0px;
+  padding: 0px;
+  width: 150px;
+  height: 100%;
+  border-style: solid;
+  border-color: white;
+  border-width: 0px 0px 1px 0px;
+}
+
+#productListBtns {
+  position: absolute;
+  width: 150px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.productBtn {
+  width: 80px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin: 8px auto 8px auto;
+  border: 1px solid transparent;
+  text-align: center;
+}
+
+.productBtn:hover {
+  border: 1px solid rgb(246, 246, 246);
+  -webkit-box-shadow: 0 0 20px rgba(246, 246, 246, .8);
+  -moz-box-shadow: 0 0 20px rgba(246, 246, 246, .8);
+  box-shadow: 0 0 20px rgba(246, 246, 246, .8);
+  cursor: pointer;
+}
+
+#productLineB {
+  margin-top: 20px;
+}
+
+.productContent{
+  position: absolute;
+  width: 100%;
+  height:80%;
+  top:50%;
+  transform: translateY(-50%);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.productImage {
+  position: relative;
+  top:50%;
+  transform: translateY(-50%);
+  margin:0 auto;
+  width:70%;
+}
+
+.headerImage {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+}
+
+#authorDiv {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: rgb(68, 68, 68);
+}
+
+#authorEmptyDiv {
+  width: 50%;
+  height: 100%;
+  float: right;
+}
+
+#authorDivReturnBorder {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 40px;
+  height: 60px;
+  margin: -30px 0 0px -40px;
+  cursor: pointer;
+}
+
+#authorDivReturnBtn {
+  width: 0;
+  height: 0;
+  margin-top: 20px;
+  margin-left: 15px;
+  border-top: 10px solid transparent;
+  border-right: 15px solid rgb(246, 246, 246);
+  border-bottom: 10px solid transparent;
+  cursor: pointer;
+}
+
+#authorContentDiv {
+  width: 100%;
+  height: 100%;
+  padding: 140px 30px 5px 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#authorContentScroll {
+  width: 100%;
+  height: 100%;
+}
+
+#authorContent {
+  color: rgba(232, 233, 232, 0.4);
+  font-size: 0.9em;
+}
+
+#content {
+  display: flex;
+}
+
+#leftContent {
+  flex: 1;
+  height: @contentHeight;
+}
+
+#leftContent div {
+  padding-top: 30px;
+  height: 100px;
+}
+
+#centerContent {
+  width: 200px;
+  height: @contentHeight;
+}
+
+#rightContent {
+  flex: 1;
+  height: @contentHeight;
+}
+
+#rightContent div {
+  height: 100px;
+  margin: 200px 0px 0px 0px;
+  padding-top: 30px;
+}
+
+#animateImageView {
+  background-color: rgb(178, 188, 196);
+  width: 200px;
+  height: 200px;
+  margin: 50px 0px 50px 0px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+}
+
+#contenText {
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  Vertical-align: middle;
+  color: white;
+  font-size: 1.2em;
+}
+
+.iconImage {
+  filter: alpha(opacity=30);
+  -moz-opacity: 0.3;
+  -khtml-opacity: 0.3;
+  opacity: 0.3;
+  background-color: transparent;
+}
+
+.iconImage:hover {
+  filter: alpha(opacity=100);
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/*这里是闪烁光标*/
+.blinkUnderline {
+  -webkit-animation: blink 1s infinite steps(1, start);
+  -o-animation: blink 1s infinite steps(1, start);
+  animation: blink 1s infinite steps(1, start);
+}
+
+.roundOutingAnimate(@width:200px,@height:200px,@time:5s,@unitTime:0.5s,@shadowColor,@borderColor) {
+  content: '';
+  position: absolute;
+  width: @width;
+  height: @height;
+  border-radius: 50%;
+  box-shadow: 0 0 40px 6px @shadowColor;
+  border: 2px solid @borderColor;
+  top: 50%;
+  left: 50%;
+  margin-top: -@width/2;
+  margin-left: -@height/2;
+  z-index: 3;
+  opacity: 0;
+  -webkit-animation: halo @time @unitTime infinite ease-out;
+  -moz-animation: halo @time @unitTime infinite ease-out;
+  animation: halo @time @unitTime infinite ease-out;
+}
+
+.roundOutingAnimate {
+  .roundOutingAnimate(200px, 200px, 6s, 0.1s, rgb(69, 103, 255), rgba(29, 63, 232, 0.84));
+}
+
+.roundOutingAnimate:hover {
+  .roundOutingAnimate(200px, 200px, 6s, 0.1s, rgba(255, 0, 3, 0.86), #ff0001);
+}
+
+/*这里设置动画blink*/
+@keyframes blink {
+  0%, 100% {
+    color: white;
+  }
+  50% {
+    color: transparent;
+  }
+}
+
+@-moz-keyframes halo {
+  0% {
+    opacity: 0;
+    -moz-transform: scale(1.0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -moz-transform: scale(1.0);
+  }
+}
+
+@-ms-keyframes halo {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes halo {
+  0% {
+    opacity: 0;
+    -o-transform: scale(1.0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -o-transform: scale(1.0);
+  }
+}
+
+@keyframes halo {
+  0% {
+    opacity: 0;
+    transform: scale(1.0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.0);
+  }
+}
+
+@-webkit-keyframes halo {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1.0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.0);
+  }
+}
+
+@media (max-width: 1500px) {
+  .imageM{display: block;}
+  .imageL{display: none;}
+}
+@media (min-width: 1500px) {
+  .imageM{display: none;}
+  .imageL{display: block;}
+}
