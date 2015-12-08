@@ -31,7 +31,7 @@ $(document).ready(function () {
     });
     //slider.slideUp();
     //slider.slideDown();
-    slider.slideToIndex(0);
+    //slider.slideToIndex(0);
     //slider.unbind();
     //slider.rebind();
 
