@@ -25,14 +25,14 @@ $(document).ready(function () {
         mouseDragEvents: true,
         touchEvents: true,
         arrowKeyEvents: true,
-        pagination: false,
+        pagination: true,
         nthClasses: false,
         detectHash: true
     });
     //slider.slideUp();
     //slider.slideDown();
     //slider.slideToIndex(0);
-    //slider.unbind();
+    slider.unbind();
     //slider.rebind();
 
 
@@ -114,6 +114,7 @@ $(document).ready(function () {
     });
 
     $(".clickBtns").on("click", function () {
+        slider.unbind();
         var name = $(this).attr("name");
         if (name == "author") {
             //作者信息
@@ -148,7 +149,6 @@ $(document).ready(function () {
             curBtn.style.mozBoxShadow = "0 0 20px rgba(246, 246, 246, .8)";
             curBtn.style.boxShadow = "0 0 20px rgba(246, 246, 246, .8)";
 
-            //slider.unbind();
             slider.rebind();
             slider.slideToIndex(0);
             $("#productFullScreenDiv").show();
@@ -169,6 +169,7 @@ $(document).ready(function () {
     });
 
     $("#indexBtn").on("click", function () {
+        slider.unbind();
         $("#productFullScreenDiv").hide();
         showText("Welcome", typingText, 300, true, true);
     });
