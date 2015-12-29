@@ -105,7 +105,7 @@ $(document).ready(function () {
 
     $(".iconImage").on("mouseenter", function () {
         if ($("#animateImageView").is(":visible")) {
-            showText($(this).attr("name"), typingText, 200, true, false, false);
+            showText($(this).attr("name1"), typingText, 200, true, false, false);
         }
     }).on("mouseleave", function () {
         if ($("#animateImageView").is(":visible")) {
