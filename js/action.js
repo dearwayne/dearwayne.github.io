@@ -127,8 +127,8 @@ $(document).ready(function () {
             imageBody.innerHTML = "";
             for (var i = 1; i <= count; i++) {
                 imageBody.innerHTML += "<div class='slide'><div class='productContent'><div class='productImage'>"
-                    + "<img class='imageM' src='http://7xoypx.com1.z0.glb.clouddn.com/@/images/" + name + "/M00" + i + ".png'/>"
-                    + "<img class='imageL' src='http://7xoypx.com1.z0.glb.clouddn.com/@/images/" + name + "/L00" + i + ".png'/>"
+                    + "<img class='imageM' src='images/products/" + name + "/M00" + i + ".png'/>"
+                    + "<img class='imageL' src='images/products/" + name + "/L00" + i + ".png'/>"
                     + "</div></div></div>";
             }
 
